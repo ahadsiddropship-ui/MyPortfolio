@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ahad | Portfolio</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+
+  <!-- Background Effects -->
+  <div class="blob blob1"></div>
+  <div class="blob blob2"></div>
+  <div class="blob blob3"></div>
+  <div class="cursor-glow"></div>
+
+<div class="code-bg">
+  <span>const model = RandomForest()</span>
+  <span>import pandas as pd</span>
+  <span>df = df.dropna()</span>
+  <span>accuracy = 92%</span>
+  <span>PowerBI Dashboard</span>
+  <span> from sklearn.linear_model</span>
+  <span>name = ""</span>
+  <span>train_test_split</span>
+  <span>Select all</span>
+
+</div>
+
+<nav class="navbar">
+  <div class="nav-container">
+
+    <h2 class="logo">Ahad</h2>
+
+   <ul class="nav-links">
+  <li><a href="about.html">About</a></li>
+  <li><a href="project.html">Projects</a></li>
+  <li><a href="contact.html">Contact</a></li>
+</ul>
+
+  </div>
+</nav>
+
+  <!-- HERO -->
+  <header class="container hero-section">
+    <div class="hero-left">
+      <h1>Hi, I'm <span>Ahad</span> 👋</h1>
+      <h2>Data Science Enthusiast & Developer</h2>
+      <p>
+        I build machine learning models, data dashboards, and modern web solutions
+        to solve real-world problems.
+      </p>
+
+      <div class="hero-buttons">
+        <a href="project.html" class="btn">🚀 View Projects</a>
+        <a href="https://github.com/ahadsiddropship-ui" target="_blank" class="btn-outline">GitHub</a>
+      </div>
+    </div>
+
+    <div class="hero-right">
+      <div class="glow-circle"></div>
+
+      <div class="dashboard-advanced">
+
+    <h3>Analytics Overview</h3>
+
+    <!-- Stats -->
+    <div class="stats">
+      <div class="stat">
+        <p>Revenue</p>
+        <h4>₹1.2L</h4>
+      </div>
+      <div class="stat">
+        <p>Growth</p>
+        <h4>+18%</h4>
+      </div>
+      <div class="stat">
+        <p>Accuracy</p>
+        <h4>92%</h4>
+      </div>
+    </div>
+
+    <!-- Line Graph -->
+    <div class="line-chart">
+      <svg viewBox="0 0 300 100">
+        <polyline 
+          fill="none" 
+          stroke="#38bdf8" 
+          stroke-width="3"
+          points="0,80 40,60 80,65 120,40 160,50 200,30 240,35 280,20"
+        />
+      </svg>
+    </div>
+    </div>
+    <section class="hero-bottom">
+  <div class="container bottom-content">
+
+    <div class="tech">
+      <span>Python</span>
+      <span>Machine Learning</span>
+      <span>Power BI</span>
+      <span>Data Analysis</span>
+    </div>
+
+    <div class="stats-mini">
+      <div>
+        <h3>3+</h3>
+        <p>Projects</p>
+      </div>
+      <div>
+        <h3>92%</h3>
+        <p>Model Accuracy</p>
+      </div>
+      <div>
+        <h3>5+</h3>
+        <p>Tools Used</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+  </header>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2026 Ahad | Portfolio</p>
+  </footer>
+
+  <!-- JS (after DOM loads) -->
+  <script>
+    const glow = document.querySelector('.cursor-glow');
+
+    document.addEventListener('mousemove', (e) => {
+      if (glow) {
+        glow.style.left = e.clientX + 'px';
+        glow.style.top = e.clientY + 'px';
+      }
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects | Ahad</title>
+
+  <link rel="stylesheet" href="project.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="nav-container">
+    <h2 class="logo">Ahad Siddique - Projects</h2>
+
+    <ul class="nav-links">
+      <li><a href="web.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <div class="container">
+
+    <h2>Projects</h2>
+
+    <div class="projects-grid">
+
+      <div class="project-card">
+
+        <!-- IMAGE SLIDER -->
+        <div class="project-images">
+          <img src="1st.png" class="active">
+          <img src="2nd.png">
+          <img src="3rd.png">
+        </div>
+
+        <!-- CONTENT -->
+        <div class="project-content">
+          <h3>📊 Sales Forecasting & Business Insights</h3>
+
+          <p>
+            Built an end-to-end analytics system combining Power BI dashboards 
+            and a Random Forest model to predict sales trends and generate 
+            actionable business insights.
+          </p>
+
+          <div class="tags">
+            <span>Python</span>
+            <span>Machine Learning</span>
+            <span>Power BI</span>
+            <span>Data Analysis</span>
+          </div>
+
+          <a href="https://github.com/ahadsiddropship-ui/Sales-Forecast" 
+             target="_blank" 
+             class="project-btn">
+            <span>View Project →</span>
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+  <div class="container">
+
+    <h2>Skills</h2>
+
+    <div class="skills-grid">
+
+      <div class="skill">
+        <p>Python</p>
+        <div class="bar"><span data-width="90%"></span></div>
+      </div>
+
+      <div class="skill">
+        <p>Machine Learning</p>
+        <div class="bar"><span data-width="88%"></span></div>
+      </div>
+
+      <div class="skill">
+        <p>Power BI</p>
+        <div class="bar"><span data-width="95%"></span></div>
+      </div>
+
+      <div class="skill">
+        <p>Data Analysis</p>
+        <div class="bar"><span data-width="88%"></span></div>
+      </div>
+
+      <div class="skill">
+        <p>SQL</p>
+        <div class="bar"><span data-width="78%"></span></div>
+      </div>
+
+      <div class="skill">
+        <p>Excel</p>
+        <div class="bar"><span data-width="75%"></span></div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 Ahad | Portfolio</p>
+</footer>
+
+<!-- JS -->
+
+<script>
+// Skill Animation
+const bars = document.querySelectorAll('.bar span');
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const bar = entry.target;
+      bar.style.width = bar.dataset.width;
+      observer.unobserve(bar);
+    }
+  });
+}, { threshold: 0.3 });
+
+bars.forEach(bar => observer.observe(bar));
+
+
+// Button Effects
+const buttons = document.querySelectorAll('.project-btn');
+
+buttons.forEach(btn => {
+  btn.addEventListener('click', function (e) {
+    const circle = document.createElement("span");
+    const diameter = Math.max(this.clientWidth, this.clientHeight);
+
+    circle.style.width = circle.style.height = `${diameter}px`;
+    circle.style.left = `${e.offsetX - diameter / 2}px`;
+    circle.style.top = `${e.offsetY - diameter / 2}px`;
+    circle.classList.add("ripple");
+
+    this.appendChild(circle);
+    setTimeout(() => circle.remove(), 600);
+  });
+});
+
+
+// Image Slider
+document.querySelectorAll('.project-images').forEach(container => {
+  const images = container.querySelectorAll('img');
+  let index = 0;
+
+  setInterval(() => {
+    images[index].classList.remove('active');
+    index = (index + 1) % images.length;
+    images[index].classList.add('active');
+  }, 2000);
+});
+</script>
+
+</body>
+</html>
